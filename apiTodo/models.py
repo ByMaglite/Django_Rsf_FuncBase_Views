@@ -14,3 +14,9 @@ class Todo(models.Model):
     priority = models.CharField(max_length=50, choices=TITLE, default="L")
     
     done = models.BooleanField(default=False)
+    
+    updateDate= models.DateTimeField(auto_now=True)
+    creadDate = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return self.task
